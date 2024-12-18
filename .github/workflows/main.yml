@@ -23,6 +23,7 @@ jobs:
         make format
   app-runner-deployment:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Git clone the repository
         uses: actions/checkout@v3
